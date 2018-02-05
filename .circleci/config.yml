@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    machine:
+      node:
+        version: 8.9.4
+      test:
+        override:
+          - npm run coverage
+        post:
+          - mv flow-coverage $CIRCLE_ARTIFACTS
