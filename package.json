@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel ./src/index.js -o ./build/bundle.js"
+    "build": "browserify ./src -t babelify --outfile client/bundle.js"
   },
   "author": "Chance Hudson",
   "license": "MIT",
@@ -16,10 +16,13 @@
     "react-scripts": "1.1.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "babelify": "^8.0.0",
     "eslint": "^4.17.0",
     "eslint-plugin-flowtype": "^2.42.0",
     "eslint-plugin-prettier": "^2.6.0",

@@ -1,4 +1,4 @@
 {
   "plugins": ["transform-react-jsx", "transform-flow-strip-types"],
-  "presets": ["react"]
+  "presets": ["react", "env"]
 }
