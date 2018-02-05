@@ -1,3 +1,7 @@
+coverage: &Coverage |
+  npm run coverage
+  mv flow-coverage $CIRCLE_ARTIFACTS
+
 version: 2
 jobs:
   build:
@@ -5,5 +9,4 @@ jobs:
       node:
         version: 8.9.4
     steps:
-      - npm run coverage
-      - mv flow-coverage $CIRCLE_ARTIFACTS
+      - run: *Coverage
