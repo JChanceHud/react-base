@@ -1,4 +1,5 @@
 coverage: &Coverage |
+  npm install
   npm run coverage
   mv flow-coverage $CIRCLE_ARTIFACTS
 
