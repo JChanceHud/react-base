@@ -3,12 +3,28 @@
   "version": "0.0.0",
   "description": "The oslearn web app",
   "main": "build/index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./src/index.js -o ./build/bundle.js"
   },
   "author": "Chance Hudson",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.2.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.17.0",
+    "eslint-plugin-flowtype": "^2.42.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "flow-bin": "^0.64.0",
+    "flow-coverage-report": "^0.4.1",
+    "prettier": "^1.10.2"
   }
 }
