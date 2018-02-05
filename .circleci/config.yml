@@ -1,6 +1,7 @@
 coverage: &Coverage |
   npm install
   npm run coverage
+  mkdir -p $CIRCLE_ARTIFACTS
   mv flow-coverage $CIRCLE_ARTIFACTS
 
 version: 2
