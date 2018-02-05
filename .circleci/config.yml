@@ -4,8 +4,6 @@ jobs:
     machine:
       node:
         version: 8.9.4
-      test:
-        override:
-          - npm run coverage
-        post:
-          - mv flow-coverage $CIRCLE_ARTIFACTS
+    steps:
+      - npm run coverage
+      - mv flow-coverage $CIRCLE_ARTIFACTS
