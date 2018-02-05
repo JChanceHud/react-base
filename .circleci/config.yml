@@ -1,8 +1,6 @@
 coverage: &Coverage |
   npm install
   npm run coverage
-  mkdir -p $CIRCLE_ARTIFACTS
-  mv flow-coverage $CIRCLE_ARTIFACTS
 
 version: 2
 jobs:
@@ -13,3 +11,5 @@ jobs:
     steps:
       - checkout
       - run: *Coverage
+      - store_artifacts:
+          path: ./flow-coverage
