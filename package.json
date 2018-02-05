@@ -1,11 +1,9 @@
 {
-  "name": "oslearn-web",
-  "version": "0.0.0",
-  "description": "The oslearn web app",
-  "main": "build/index.js",
+  "name": "react-base",
+  "version": "0.0.1",
+  "description": "A basic react build system",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify ./src -t babelify --outfile client/bundle.js",
     "start": "npm run build && http-server ./client",
     "watch": "nodemon -w ./src --exec 'npm run start'"
